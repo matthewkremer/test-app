@@ -39,6 +39,7 @@ export class HomePage {
 
       await Pro.deploy.init(config);
       await this.checkChannel();
+      await this.performAutomaticUpdate();
 
     } catch (err) {
       Pro.monitoring.exception(err);
